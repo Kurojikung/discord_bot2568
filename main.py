@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 import yt_dlp
 import asyncio
-from myserver import server_on
+
 
 
 intents = discord.Intents.default()
@@ -11,6 +11,7 @@ intents.message_content = True
 intents.voice_states = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
+TOKEN = 'MTM1NzYyMjc3MzU4OTA4NjI0OQ.GOFX8H.o9ivqToMOSWLRuk7Y-ZyweAAIKjZOqkuE9cIVM'
 queue = []
 previous_track = None  # ตัวแปรสำหรับเก็บเพลงก่อนหน้า
 
@@ -154,5 +155,4 @@ async def show_commands(ctx):
 
 
 
-server_on()
-bot.run(os.getenv('TOKEN'))
+bot.run(TOKEN)
